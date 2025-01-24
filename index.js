@@ -7,11 +7,11 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-const apiRouter = jsonServer.router('db.json'); 
+const apiRouter = jsonServer.router('db.json');
 app.use('/api', apiRouter);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'App.jsx'));
+  res.sendFile(path.join(__dirname, 'build'));
 });
 
 app.listen(PORT, () => {
