@@ -11,7 +11,7 @@ const apiRouter = jsonServer.router('db.json');
 app.use('/api', apiRouter);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'App.jsx'));
 });
 
 app.listen(PORT, () => {
